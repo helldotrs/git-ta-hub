@@ -1,6 +1,8 @@
 username    = input("username:")
 useremail   = input("useremail:")
-passphrase  = input
+passphrase  = input("ssh passphrase (NOT YOUR GH PW):")
+if input("again:") != passphrase:
+    exit("does not match, exiting")
 
 print("run:git config --global user.name \"" + username + "\"\n
 git config --global user.email \"" + useremail + "\"")
@@ -19,9 +21,3 @@ print("run to test: ssh -T git@github.com")
 
 #git clone git@github.com:your-username/your-repository.git
 
-
-
-
-#end of program:
-print(output)
-exit()
