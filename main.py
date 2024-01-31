@@ -4,8 +4,8 @@ passphrase  = input("ssh passphrase (NOT YOUR GH PW):")
 if input("again:") != passphrase:
     exit("does not match, exiting")
 
-print("run:git config --global user.name \"" + username + "\"\n
-git config --global user.email \"" + useremail + "\"")
+print("""run:git config --global user.name \"" + username + "\"\n
+git config --global user.email \"" + useremail + "\"""")
 
 #FIXME: autorun
 print("run: ssh-keygen -t rsa -b 4096 -C \"" + useremail + "\"")
