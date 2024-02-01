@@ -15,7 +15,7 @@ print("hit [enter]")
 print("run:cat ~/.ssh/id_rsa.pub")
 print("copy output")
 print("go  to: https://github.com/settings/ssh/new")
-print("give name, paste, add SSH key")
+print("give title, paste, add SSH key") #FIXME: ask for title?
 print("MFA")
 print("run to test: ssh -T git@github.com")
 
