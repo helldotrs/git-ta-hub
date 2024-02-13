@@ -6,7 +6,9 @@ if input("again:") != passphrase:
 
 print(f'''run:git config --global user.name "{username}" 
     && git config --global user.email "{useremail}"')
-    && run: ssh-keygen -t rsa -b 4096 -C "{useremail}"''')
+    && run: ssh-keygen -t rsa -b 4096 -C "{useremail}"
+    
+    ''')
 print("hit:enter")
 print("optional, type passphrase, enter, passphrase")
 print("hit [enter]")
