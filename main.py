@@ -1,3 +1,5 @@
+import subprocess
+
 username    = input("username:")
 useremail   = input("useremail:")
 passphrase  = input("ssh passphrase (NOT YOUR GH PW):")
