@@ -16,7 +16,7 @@ def run_cmd(cmd):
 
 gh_name      = get_input("enter gh username: ")
 gh_email     = get_input("ente gh email: ")
-local_passwd = get_input("enter password/-phrase (NOT YOUR GH LOGIN: ")
+local_passwd = get_input("enter password/-phrase (NOT YOUR GH LOGIN: ", True) # confirm = True
 
 run_cmd(f'git config --global user.name  "{gh_name}"' )
 run_cmd(f'git config --global user.email "{gh_email}"')
