@@ -14,9 +14,9 @@ def get_input(prompt, confirm = False):
 def run_cmd(cmd):
     subprocess.run(cmd, shell = True)
 
-gh_name      = get_input("enter gh username: ")
-gh_email     = get_input("ente gh email: ")
-local_passwd = get_input("enter password/-phrase (NOT YOUR GH LOGIN: ", True) # confirm = True
+gh_name      = get_input("enter gh username")
+gh_email     = get_input("ente gh email")
+local_passwd = get_input("enter password/-phrase (NOT YOUR GH LOGIN)", True) # confirm = True
 
 run_cmd(f'git config --global user.name  "{gh_name}"' )
 run_cmd(f'git config --global user.email "{gh_email}"')
