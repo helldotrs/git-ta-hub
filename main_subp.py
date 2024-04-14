@@ -19,7 +19,7 @@ gh_email     = get_input("ente gh email: ")
 local_passwd = get_input("enter password/-phrase (NOT YOUR GH LOGIN: ")
 
 run_cmd(f'git config --global user.name  "{gh_name}"' )
-run_cmd(f'git config --gloval user.email "{gh_email}"')
+run_cmd(f'git config --global user.email "{gh_email}"')
 
 run_cmd(f'ssh-keygen -t rsa -b 4096 -C "{gh_name}" -N "{local_passwd}" -f ~/.ssh/id_rsa')
 
