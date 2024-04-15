@@ -23,11 +23,11 @@ print("output:\n\n")
 run_cmd(f'cat ~/.ssh/id_rsa.pub')
 
 print("""\n 
--copy output above\n
--open https://github.com/settings/ssh/new\n 
--output goes under 'key', you'll figure the rest out\n
--test by running 'ssh -T git@github.com' in terminal\n
-""")
+-copy output above
+-open https://github.com/settings/ssh/new
+-output goes under 'key', you'll figure the rest out
+-test by running 'ssh -T git@github.com' in terminal
+\n""")
 
 exit('done. exiting.')
 
