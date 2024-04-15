@@ -29,6 +29,11 @@ print("""\n
 -test by running 'ssh -T git@github.com' in terminal
 \n""")
 
+input("once done, hit enter to continue")
+
+#add ssh test and fingerprinter
+#ED25519 key fingerprint is SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU.
+
 exit('done. exiting.')
 
 #fix me:add "ssh -T git@github.com" test
