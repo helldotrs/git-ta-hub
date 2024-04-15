@@ -2,13 +2,8 @@ import subprocess
 
 #note: error handling has been intentionally left out. as this code is run locally and you should know how to answer a simple prompt, it would just be bloat.
 
-def get_input(prompt, confirm = False):
+def get_input(prompt):
     user_input = input(f"{prompt}: ")
-
-    if confirm:
-        if input("Confirm: " != user_input):
-            exit("confirmation failed. exiting.")
-
     return user_input
 
 def run_cmd(cmd):
@@ -16,7 +11,7 @@ def run_cmd(cmd):
 
 gh_name      = get_input("enter gh username")
 gh_email     = get_input("ente gh email")
-local_passwd = get_input("enter password/-phrase (NOT YOUR GH LOGIN)", True) # confirm = True
+local_passwd = get_input("enter password/-phrase (NOT YOUR GH LOGIN)")
 
 run_cmd(f'git config --global user.name  "{gh_name}"' )
 run_cmd(f'git config --global user.email "{gh_email}"')
