@@ -19,6 +19,3 @@ print("give title, paste, add SSH key") #FIXME: ask for title?
 print("MFA")
 print("run to test:\nssh -T git@github.com")
 print("type \"yes\" and hit [enter]")
-
-#git clone git@github.com:your-username/your-repository.git
-
