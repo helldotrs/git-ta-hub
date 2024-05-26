@@ -16,7 +16,6 @@ print("hit:enter")
 print("optional, type passphrase, enter, passphrase")
 print("hit [enter]")
 
-_ = input("once you completed the above steps, hit enter to continue.")
 print("run:\ncat ~/.ssh/id_rsa.pub")
 print(" ")
 print("copy output")
