@@ -1,11 +1,30 @@
 import subprocess
 
-def run_subprocess(execute_this):
-    try: 
-        # shell=True for single single string
-        subprocess.run(execute_this, shell=True, check=True)
-    except subprocess.CalledProcessError as e:
-        print(f'error: {e}')
+def run_subprocess(execute_this, request_output = False):
+    if !request_output:
+        try: 
+            # shell=True for single single string
+            subprocess.run(execute_this, shell=True, check=True)
+            
+        except subprocess.CalledProcessError as e:
+            print(f'error: {e}')
+            print("error id: smol penguin")
+            print(f"str: {execute_this}")
+            
+    else:
+        try:
+
+            result = subprocess.run(execute_this, shell=True, check=True, capture_output=True, text=True)
+            return result.stdout #this is UGLY but so is having just one long line.   
+            
+        except subprocess.CalledProcessError as e:
+            print(f"error: {e}")
+            print(f"stderr: {e.stderr}")
+            print("error it: big ant")
+            print(f"str: {execute_this}")
+                
+        
+
 
 print ("Warning: any input will be kept unencryted in ram while this software is running.")
 print (" ")
