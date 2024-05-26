@@ -1,40 +1,24 @@
 import subprocess
 
-#note: error handling has been intentionally left out. as this code is run locally and you should know how to answer a simple prompt, it would just be bloat.
+print ("Warning: any input will be kept unencryted in ram while this software is running.")
+print (" ")
 
-def get_input(prompt):
-    user_input = input(f"{prompt}: ")
-    return user_input
+username    = input("username:")
+useremail   = input("useremail:")
 
-def run_cmd(cmd):
-    subprocess.run(cmd, shell = True)
+print(f'run:\ngit config --global user.name "{username}" && git config --global user.email "{useremail}" && ssh-keygen -t rsa -b 4096 -C "{useremail}"')
 
-gh_name      = get_input("enter gh username")
-gh_email     = get_input("ente gh email")
-local_passwd = get_input("enter password/-phrase (NOT YOUR GH LOGIN)")
 
-run_cmd(f'git config --global user.name  "{gh_name}"' )
-run_cmd(f'git config --global user.email "{gh_email}"')
+print("run:\ncat ~/.ssh/id_rsa.pub")
+print(" ")
+print("copy output")
+print("go  to: https://github.com/settings/ssh/new")
+print("give title, paste, add SSH key") #FIXME: ask for title?
+print("MFA")
 
-run_cmd(f'ssh-keygen -t rsa -b 4096 -C "{gh_name}" -N "{local_passwd}" -f ~/.ssh/id_rsa')
+_ = input("setup complete, hit enter to test.")
+print("run to test:\nssh -T git@github.com")
+print("type \"yes\" and hit [enter]")
 
-print("output:\n\n")
+#git clone git@github.com:your-username/your-repository.git
 
-run_cmd(f'cat ~/.ssh/id_rsa.pub')
-
-print("""\n 
--copy output above
--open https://github.com/settings/ssh/new
--output goes under 'key', you'll figure the rest out
--test by running 'ssh -T git@github.com' in terminal
-\n""")
-
-input("once done, hit enter to continue")
-
-#add ssh test and fingerprinter
-#ED25519 key fingerprint is SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU.
-
-exit('done. exiting.')
-
-#fix me:add "ssh -T git@github.com" test
-#fix me:research copying output automatically
