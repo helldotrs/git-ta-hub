@@ -4,11 +4,6 @@ print (" ")
 username    = input("username:")
 useremail   = input("useremail:")
 
-#not yet implimented:
-#passphrase  = input("ssh passphrase (NOT YOUR GH PW) (not implimented:")
-#if input("again:") != passphrase:
-#    exit("does not match, exiting")
-
 print(f'run:\ngit config --global user.name "{username}" && git config --global user.email "{useremail}" && ssh-keygen -t rsa -b 4096 -C "{useremail}"')
 
 print(" ")
