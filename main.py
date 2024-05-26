@@ -1,5 +1,8 @@
 import subprocess
 
+print ("Warning: any input will be kept unencryted in ram while this software is running.")
+print (" ")
+
 username    = input("username:")
 useremail   = input("useremail:")
 
