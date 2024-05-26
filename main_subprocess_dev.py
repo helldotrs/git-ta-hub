@@ -41,5 +41,5 @@ print("give title, paste ssh key, hit 'add SSH key'") #FIXME: ask for title?
 
 
 _ = input("\n+++++++++\nsetup complete, hit enter to test.")
-print("run to test:\nssh -T git@github.com")
-print("type \"yes\" and hit [enter]")
+run_subprocess("ssh -T git@github.com")
+
