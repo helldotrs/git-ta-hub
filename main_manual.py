@@ -15,7 +15,7 @@ print("run:\ncat ~/.ssh/id_rsa.pub")
 print(" ")
 print("copy output")
 print("go  to: https://github.com/settings/ssh/new")
-print("give title, paste, add SSH key") #FIXME: ask for title?
+print("give title, paste, add SSH key") 
 print("MFA")
 print("run to test:\nssh -T git@github.com")
 print("type \"yes\" and hit [enter]")
